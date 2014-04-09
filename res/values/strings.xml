@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="navigation_array">
+		<item>Kategorier</item>
+		<item>Favoritter</item>
+		<item>Mine oppskrifter</item>
+		<item>Logg ut</item>
+	</string-array>
+
+	<string-array name="category_array">
+		<item>Frokost</item>
+		<item>Lunsj</item>
+		<item>Middag</item>
+		<item>Dessert</item>
+		<item>Bakst</item>
+		<item>Kvelds</item>
+	</string-array>
+
+	<string name="app_name">Mat</string>
+	<string name="username">Brukernavn</string>
+	<string name="password">Passord</string>
+	<string name="login">Logg inn</string>
+	<string name="logo">Logo</string>
+</resources>
