@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string-array name="navigation_array">
+	    <item>Favoritter</item>
+	    <item>Mine oppskrifter</item>
+	    <item>Handleliste</item>
 		<item>Kategorier</item>
-		<item>Favoritter</item>
-		<item>Mine oppskrifter</item>
+		<item>@array/category_array</item>
 		<item>Logg ut</item>
 	</string-array>
 
@@ -21,4 +23,9 @@
 	<string name="password">Passord</string>
 	<string name="login">Logg inn</string>
 	<string name="logo">Logo</string>
+	<string name="or">eller</string>
+	<string name="register">Registrer deg</string>
+	
+	<string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>

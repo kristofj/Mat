@@ -14,6 +14,8 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 
+import android.os.AsyncTask;
+
 
 public class HttpHelper {
 
@@ -53,5 +55,15 @@ public class HttpHelper {
 		ResponseHandler<String> responseHandler = new BasicResponseHandler();
 
 		return client.execute(post, responseHandler);
+	}
+	
+	private class HttpReadTask extends AsyncTask<ArrayList<NameValuePair>, Void, String> {
+
+		@Override
+		protected String doInBackground(ArrayList<NameValuePair>... params) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
 	}
 }

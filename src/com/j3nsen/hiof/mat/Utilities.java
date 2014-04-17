@@ -11,10 +11,10 @@ public class Utilities {
 	public static boolean stringNullOrEmpty(String s) {
 		if (s == null)
 			return true;
-		else if (s.isEmpty())
+		if (s.isEmpty())
 			return true;
-		else
-			return false;
+		
+		return false;
 	}
 
 	//Hasher en string med sha256.

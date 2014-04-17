@@ -1,0 +1,89 @@
+Operasjon:
+	Add:
+		Sending:
+			{
+				"operation": "add",
+				"entity": "" //user,product,recipe.
+				"token": "" //Token fra server.
+				"data": [
+					{ "username":"", "password":"" }, //User
+					{ "product_code":"", "barcode_format":"", "name":"" } //Product
+					{ "title":"", "description":"", "user_id":12, "image": "filepath" } //Recipe
+				]
+			}
+		Response:
+			{
+				"status":1 // 1 for good, 0 for bad.
+			}
+
+	Update:
+		Sending:
+			{
+				"operation": "update",
+				"recipe_version": 12, //Versjonen i appen.
+				"product_version": 12
+				
+			}
+		Response:
+			{
+				"products": [ //Returnerer ID-er som appen ikke har.
+					{ "id": 12 },
+					...
+				]
+				"recipes": [ //ID-er som appen ikke har.
+					{ "id": 12 },
+					...
+				]
+			}
+
+	Get_all:
+		Sending:
+			{
+				"operation": "get_all",
+			}
+		Response:
+			{
+				"recipes": [
+					{
+						"id": 12,
+						"title": "",
+						"description": "",
+						"creator": "",
+						"image": "",
+						"products": [ //Alle produktene som er i oppskriften.
+							{ "id": 12 },
+							...
+						]
+					},
+					.....
+				],
+				"products": [
+					{
+						"product_code": "",
+						"barcode_format": "",
+						"name": ""
+					},
+					.....
+				]
+			}
+	Get:
+		Sending:
+			{
+				"operation": "get",
+				"entity": "",
+				"data": [
+					{ "id": 12},
+					...
+				]
+			}
+		Response:
+			{
+				"products": [ //Avhengig av entity
+					{
+						"product_code": "",
+						"barcode_format": "",
+						"name": ""
+					}
+				]
+			}
+
