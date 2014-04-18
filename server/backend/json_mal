@@ -1,4 +1,17 @@
 Operasjon:
+	Login:
+		Sending:
+			{
+				"operation": "login",
+				"username": "",
+				"password": ""
+			}
+		Return:
+			{
+				"status":1, //0 hvis invalid login.
+				"token":"",
+				"id":12
+			}
 	Add:
 		Sending:
 			{
@@ -8,7 +21,7 @@ Operasjon:
 				"data": [
 					{ "username":"", "password":"" }, //User
 					{ "product_code":"", "barcode_format":"", "name":"" } //Product
-					{ "title":"", "description":"", "user_id":12, "image": "filepath" } //Recipe
+					{ "title":"", "description":"", "user_id":12, "image": "filepath", "products":[{"id":12, "unit":"", "value":12.2}]} //Recipe
 				]
 			}
 		Response:
@@ -20,19 +33,13 @@ Operasjon:
 		Sending:
 			{
 				"operation": "update",
-				"recipe_version": 12, //Versjonen i appen.
-				"product_version": 12
-				
+				"recipe_version": 12, //Høyeste id i appen.
+				"product_version": 12 //Høyeste id i appen.
 			}
 		Response:
 			{
-				"products": [ //Returnerer ID-er som appen ikke har.
-					{ "id": 12 },
-					...
-				]
-				"recipes": [ //ID-er som appen ikke har.
-					{ "id": 12 },
-					...
+				"changes": [
+					{"table":12 } //ID-er som er lagt til.
 				]
 			}
 
@@ -79,11 +86,14 @@ Operasjon:
 		Response:
 			{
 				"products": [ //Avhengig av entity
-					{
-						"product_code": "",
-						"barcode_format": "",
-						"name": ""
-					}
+						{
+							"product_code": "",
+							"barcode_format": "",
+							"name": ""
+						}
+					]
+				"recipes": [
+
 				]
 			}
 
